@@ -9,6 +9,11 @@ function calculateRentalCost(days) {
   const sevenDaysOff = 50;
   const threeDaysOff = 20;
 
+  if (days <= 0) {
+    // eslint-disable-next-line no-const-assign
+    return 0;
+  }
+
   if (days < 3) {
     // eslint-disable-next-line no-const-assign
     return days * dayRental;
